@@ -1,0 +1,17 @@
+{
+    "D1": {
+      "R1": "NARUTO",
+      "R2": "ONE PEICE"
+    },
+    "D2": {
+      "R1": "BLEACH",
+      "R2": "DRAGON BALL Z"
+    },
+    "D3": {
+      "R1": "HXH",
+      "R2": "SNK"
+    },
+    "Final":{
+      "Message":"MERCI POUR TA PARTICIPATION"
+    }
+  }
