@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "druk_cond_lcg_websuper";
+    src: url("assets/font/drukcond-super-cy-gr-web-webfont.woff2") format("woff2"),
+    url("assets\font\drukcond-super-cy-gr-web-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+    
+.dilemma-page {
+    font-family: "druk_cond_lcg_websuper";
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+    
+.dilemma-page .left-answer {
+    background-color: white;
+    color: black;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dilemma-page .final {
+    color: white;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    
+.msgFinal {
+    font-size: 7em;
+    text-align: center;
+}
+.msgCredits{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3em;
+    text-align: center;
+}
+
+
+.Reponse {
+    font-size: 7em;
+    text-align: center;
+}
+
+.dilemma-page .right-answer {
+    background-color: black;
+    color: white;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+    
+.back-button-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+    
+button.back-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 40px;
+    background: linear-gradient(to right, black 50%, white 50%);
+    border: none;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+    
+button.back-button span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(to right, white 50%, black 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+    
+@media only screen and (max-width: 768px) {
+    .dilemma-page {
+    flex-direction: column;
+}
+    
+    .dilemma-page .left-answer,
+    .dilemma-page .right-answer {
+        width: 100%;
+        height: 50%;
+    }
+    .left-answer span, .right-answer span {
+        font-size: 5em;
+    }
+
+
+    button.back-button{
+        visibility: hidden;
+    }
+    
+
+    .back-icon-container{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+            
+    button.icon-button {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        color: wheat;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .msgCredits{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2em;
+        text-align: center;
+    }
+
+
+
+}
