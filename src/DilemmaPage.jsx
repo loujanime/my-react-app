@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./DilemmaPage.css";
 import { useParams } from 'react-router-dom';
 
-
 const DilemmaPage = () => {
   const { code } = useParams();
 
@@ -39,8 +38,13 @@ const DilemmaPage = () => {
     }
   };
 
+  const ReturnHome = () => {
+    window.location.href = "https://minuteanime.com";
+  };
+
   return (
     <>
+    
       <div className="dilemma-page">
         {dilemmas && currentDilemma != "Final" && (
           <>
@@ -53,23 +57,26 @@ const DilemmaPage = () => {
           </>
         )}
         {dilemmas && currentDilemma == "Final" && (
-          <div className="final">
+          <><div className="final">
             {" "}
             <span className="msgFinal">MERCI POUR TA PARTICIPATION</span>
             <span className="msgCredits"> MINUTE ANIME</span>
           </div>
+          <button onClick={ReturnHome} className="icon-button">
+            <span>HOME</span>
+          </button>
+          </>
         )}
       </div>
       <div className="back-button-container">
-        {dilemmas && currentDilemmaIndex > 0  && (
+        {dilemmas && currentDilemmaIndex > 0  && currentDilemma != "Final" &&(
           <button className="back-button" onClick={handleBackClick}>
-            <i className="fa fa-arrow-left"></i>
             <span>Retour</span>
           </button>
         )}
       </div>
       <div className="back-icon-container">
-        {window.innerWidth < 767 && currentDilemmaIndex > 0 && (
+        {window.innerWidth < 767 && currentDilemmaIndex > 0 &&currentDilemma != "Final" && (
           <button onClick={handleBackClick} className="icon-button">
             <span>Retour</span>
           </button>

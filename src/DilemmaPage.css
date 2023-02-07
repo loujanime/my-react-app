@@ -1,14 +1,11 @@
-@font-face {
-    font-family: "druk_cond_lcg_websuper";
-    src: url("assets/font/drukcond-super-cy-gr-web-webfont.woff2") format("woff2"),
-    url("assets\font\drukcond-super-cy-gr-web-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
+    @font-face {
+        font-family: 'DrukCond-Super';
+        src: url(assets/font/DrukCond-Super-Cy-Gr-Web.ttf) format('truetype');
     }
     
     
 .dilemma-page {
-    font-family: "druk_cond_lcg_websuper";
+    font-family: 'DrukCond-Super';
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -88,10 +85,23 @@ button.back-button {
 }
     
 button.back-button span {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background: linear-gradient(to right, white 50%, black 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.icon-button {
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color: wheat;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
     
 @media only screen and (max-width: 768px) {
@@ -121,7 +131,7 @@ button.back-button span {
         transform: translateX(-50%);
     }
             
-    button.icon-button {
+    .icon-button {
         position: absolute;
         bottom: 10px;
         left: 50%;
@@ -136,6 +146,10 @@ button.back-button span {
     }
     .msgCredits{
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1em;
+        text-align: center;
+    }
+    .msgFinal{
         font-size: 2em;
         text-align: center;
     }

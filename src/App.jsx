@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path=":code" element={<DilemmaPage />} />
+        <Route path="*" element={<div>404</div>} />
       </Routes>
     </BrowserRouter>
   );
